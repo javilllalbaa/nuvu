@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+    background: #F8F8FC;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    p{
+        margin: 0px;
+        padding: 0px;
+    }
+    .center-vertical{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,112 @@
+<div class="footer">
+    <div class="show_form" *ngIf="!statusForm" >
+        <div class="row">
+            <div class="col-sm">
+            </div>
+            <div class="col-sm form-desing">
+                <form [formGroup]="form" novalidate (ngSubmit)="save($event)">
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <label>Nombre </label>
+                        <input 
+                          type="text"
+                          formControlName="name" 
+                          class="form-control "
+                          [ngClass]="{ 
+                            'is-invalid': nameField.hasError('required') && nameField.touched,
+                            'is-valid': !(nameField.hasError('required')) && nameField.touched
+                          }"
+                          placeholder="Ingrese su nombre">
+                        <div *ngIf="!(nameField.hasError('required')) && nameField.touched" class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div *ngIf="nameField.hasError('required') && nameField.touched" class="invalid-feedback">
+                          Campo requerido.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <label>Email </label>
+                        <input 
+                          type="email"
+                          formControlName="email"  
+                          class="form-control"
+                          [ngClass]="{ 
+                            'is-invalid': (emailField.hasError('required') && emailField.touched) || emailField.hasError('email'),
+                            'is-valid': (!(emailField.hasError('required')) && emailField.touched) || (!emailField.hasError('email') && emailField.touched)
+                          }"
+                          placeholder="Ingrese su email">
+                          <div *ngIf="!(emailField.hasError('required')) && emailField.touched" class="valid-feedback">
+                            Looks good!
+                          </div>
+                          <div *ngIf="emailField.hasError('required') && emailField.touched" class="invalid-feedback">
+                            Campo requerido.
+                          </div>
+                          <div *ngIf="!(!emailField.hasError('email') && emailField.touched)" class="invalid-feedback">
+                            Correo invalido.
+                          </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <label>Teléfono</label>
+                        <input 
+                          type="text"
+                          formControlName="phone"   
+                          class="form-control"
+                          [ngClass]="{ 
+                            'is-invalid': phoneField.hasError('required') && phoneField.touched,
+                            'is-valid': !(phoneField.hasError('required')) && phoneField.touched
+                          }" 
+                          placeholder="Ingrese su telefono">
+                          <div *ngIf="!(phoneField.hasError('required')) && phoneField.touched" class="valid-feedback">
+                            Looks good!
+                          </div>
+                          <div *ngIf="phoneField.hasError('required') && phoneField.touched" class="invalid-feedback">
+                            Campo requerido.
+                          </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12 mb-3">
+                        <label>Comentario </label>
+                        <textarea 
+                          class="form-control"
+                          [ngClass]="{ 
+                            'is-invalid': commentaryField.hasError('required') && commentaryField.touched,
+                            'is-valid': !(commentaryField.hasError('required')) && commentaryField.touched
+                          }"
+                          formControlName="commentary"   
+                          placeholder="Ingrese su comentario" 
+                          required>
+                        </textarea>
+                        <div *ngIf="!(commentaryField.hasError('required')) && commentaryField.touched" class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div *ngIf="commentaryField.hasError('required') && commentaryField.touched" class="invalid-feedback">
+                          Campo requerido.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm">
+                        <button class="btn btn-primary" [disabled]="form.invalid" type="submit">Guardar</button>
+                      </div>
+                      <div class="col-sm">
+                        <button class="btn btn-secondary" type="button" (click)="changeBtn()" >cancelar </button>
+                      </div>
+                    </div> 
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!-- <button
+        (click)="changeBtn()" 
+        *ngIf="statusForm" 
+        type="button" 
+        class="btn btn-secondary btn-inf"> 
+        Escríbenos
+    </button> -->
+</div>
+

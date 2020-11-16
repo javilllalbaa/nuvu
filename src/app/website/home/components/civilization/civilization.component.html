@@ -1,0 +1,40 @@
+<div class="civilization">
+    <div>
+        <h1 class="display-4 text-center">
+            civilization
+        </h1>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <div
+            *ngFor="let civilization of civilizations$ | async"
+            (click)="open(civilization)"
+            class="hex hex-3"
+            [ngClass]="{
+                'hex-seleted': civilization.selected 
+            }"
+            style="background-image: url(./../../../../../assets/img/bg-dark-zigg-desk_2dfa68ef.jpg);" >		
+            <div class="inner">
+                <p>{{civilization.name}}</p>
+            </div>		
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>		
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="row">
+            <div class="col-sm" *ngIf="indice >= 0">
+                <img class="img_civilizaion" src="./../../../../../assets/img/imagen_{{indice}}.png" alt="">
+            </div>
+            <div class="col-sm">
+                <ul class="list-group" *ngFor="let seleted of seletedcivilizations" >
+                    <li class="list-group-item"><strong>Nombre:</strong> {{seleted.name}}</li>
+                    <li class="list-group-item"><strong>Expansión:</strong> {{seleted.expansion}}</li>
+                    <li class="list-group-item"><strong>Tipo de Arma:</strong> {{seleted.army_type}}</li>
+                    <li class="list-group-item"><strong>Equipo bono:</strong> {{seleted.team_bonus}}</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+.header{
+    margin-top: 15px;
+    height: 60px;
+    position: relative;
+    .menu{
+        background: #fff;
+        border-radius: 16px;
+        padding: 6px;
+        align-items: center;
+        div{
+            font-size: 14px;
+            line-height: 14px;
+            align-items: center;
+            text-align: center;
+            letter-spacing: -0.03em;
+            .circle{
+                width: 50px;
+                height: 50px;
+                margin-left: calc(50% - 25px);
+                left: 0px;
+                top: 0px;
+                background: linear-gradient(180deg, rgba(44, 82, 216, 0) 0%, rgba(44, 82, 216, 0.4) 100%), #54D1ED;
+                border-radius: 50%;
+                border: solid 4px #F8F8FC;
+                position: relative;
+                top: -22px;
+                .add{
+                    position: relative;
+                    top: 4px;
+                }
+            }
+            .saving{
+                position: relative;
+                bottom: 16px;
+            }
+            @media (max-width: 320px){
+                .circle{
+                    width: 36px !important;
+                    height: 36px !important;
+                    margin-left: calc(50% - 18px) !important;
+                }
+                .saving{
+                    bottom: 6px !important;
+                }
+            }
+            @media (max-width: 425px){
+                .circle{
+                    width: 44px;
+                    height: 44px;
+                    margin-left: calc(50% - 22px);
+                }
+                .saving{
+                    bottom: 10px;
+                }
+            }
+            img{
+                margin-bottom: 10px;
+                height: 22px;
+                cursor: pointer;
+            }
+            p{
+                cursor: pointer;
+            }
+        }
+        @media (max-width: 320px){
+            div{
+                font-size: 8px !important;
+            }
+        }
+        @media (max-width: 425px){
+            div{
+                font-size: 11px;
+            }
+        }
+    }
+}
+@media (max-width: 425px){
+    .header{
+        z-index: 1;
+        margin-top: 15px;
+        height: 60px;
+        width: 95%;
+        margin: 2.5%;
+        position: fixed;
+        bottom: 10px;
+    }
+}

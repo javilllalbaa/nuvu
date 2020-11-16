@@ -1,0 +1,39 @@
+.footer{
+    .btn-inf{
+        color: #e3d9b7;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: 700;
+        font-size: 1em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        padding: 0 1em;
+        text-shadow: 0 2px 5px rgba(34,27,22,.5);
+        height: 3em;
+        line-height: 3em;
+        white-space: nowrap;
+        overflow: hidden;
+        width: auto;
+        max-width: 100%;
+        z-index: 1;
+        position: fixed;
+        bottom: 30px;
+        left: 14px;
+    }
+    .show_form{
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+    }
+    .form-desing{
+        margin-top: 5%;
+        padding: 5%;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
