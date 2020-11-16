@@ -4,11 +4,11 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { LayoutComponent } from './components/layout/layout.component';
 import { VideoComponent } from './components/video/video.component';
-import { CivilizationComponent } from './components/civilization/civilization.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, VideoComponent, CivilizationComponent],
+  declarations: [LayoutComponent, VideoComponent, ProfileComponent],
   imports: [
     CommonModule,
     HomeRoutingModule

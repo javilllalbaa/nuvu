@@ -1,0 +1,84 @@
+.profile{
+        overflow: hidden;
+        .tit-profile{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 25px;  
+                color: #58506B; 
+        }
+        .inf{
+                background: linear-gradient(180deg, rgba(44, 82, 216, 0) 0%, rgba(44, 82, 216, 0.4) 100%), #54D1ED;
+                background-blend-mode: multiply, normal;
+                box-shadow: 0px 8px 20px rgba(197, 166, 236, 0.05);
+                border-radius: 20px;
+                height: 327px;
+                margin-top: 20px;
+                position: relative;
+                color: #FFFFFF;
+                .imagen-profile{
+                        position: relative;
+                        bottom: 39px;
+                        right: 32px;
+                        width: 100%;
+                }
+                .tit-img{
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 25px;
+                        margin-left: 60px;
+                        margin-top: 45px;
+                
+                }
+                .sub-tit{
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 21px;
+                        margin-left: 60px;
+                }
+                .saldo{
+                        font-weight: 600;
+                        font-size: 36px;
+                        line-height: 49px;
+                        margin-left: 60px;
+                }
+        }
+        @media (max-width: 768px){
+                .inf{
+                        height: 236px;
+                        .imagen-profile{
+                                bottom: 22px;
+                                width: 90%;
+                        }
+                        .tit-img{
+                                margin-left: 30px;
+                                margin-top: 45px;
+                        
+                        }
+                        .sub-tit{
+                                margin-left: 30px;
+                        }
+                        .saldo{
+                                margin-left: 30px;
+                        }
+                }
+        }
+        .history{
+                background: #FFFFFF;
+                box-shadow: 0px 8px 20px rgba(197, 166, 236, 0.05);
+                border-radius: 20px;
+                padding: 0 4px;
+                margin-top: 20px;
+                .border-inf{
+                        border-bottom: 1px solid #FAF9FD;
+                        height: 40px;
+                        color: #58506B;
+                        margin: 0px;
+                        .data-right{
+                                font-weight: 600;
+                                text-align: right;
+                        }
+                }
+        }
+}
