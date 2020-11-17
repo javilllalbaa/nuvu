@@ -7,10 +7,11 @@ import { VideoComponent } from './components/video/video.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { GoalsComponent } from './components/goals/goals.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { NoticesComponent } from './components/notices/notices.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, VideoComponent, ProfileComponent, GoalsComponent, PortfolioComponent],
+  declarations: [LayoutComponent, VideoComponent, ProfileComponent, GoalsComponent, PortfolioComponent, NoticesComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
