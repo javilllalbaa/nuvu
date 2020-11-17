@@ -8,15 +8,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class VideoComponent implements OnInit {
 
-  safeUrl;
-  videoSource = "https://www.youtube.com/embed/QFlVNtGJVDU?autoplay=1&start=20&end=56&loop=1&controls=1&disablekb=1&showinfo=0"
-
-  constructor(
-    private _sanitizer: DomSanitizer
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.safeUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this.videoSource);    
   }
 
 }

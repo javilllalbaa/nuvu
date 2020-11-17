@@ -1,20 +1,29 @@
 .video{
-    .bg-text {
-        background-color: black;
-        background-color: rgba(0, 0, 0, 0.4);
-        color: white;
-        font-weight: bold;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        width: 100%;
-        height: 322px;
-        padding: 20px;
-        text-align: center;
-        img{
-            width: 426px;
+    height: 290px;
+    overflow: hidden;
+    .table{
+        margin-top: 20px;
+        .img-video-2{
+            position: relative;
+            bottom: 120px;
+        }
+        .prf-1{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            position: relative;
+            bottom: 210px;
+            left: 20px;
+            color: #fff;
+        }
+        .prf-2{
+            font-size: 12px;
+            letter-spacing: -0.03em;
+            position: relative;
+            bottom: 207px;
+            left: 20px;
+            color: #fff;
+            width: 90%;
         }
     }
 }
