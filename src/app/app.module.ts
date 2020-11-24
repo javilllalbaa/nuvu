@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { reducers } from './redux/index';
 import { EffectsModule } from '@ngrx/effects';
-import { CivilizationEffects } from './redux/civilizations/civilization.effect';
+// import { CivilizationEffects } from './redux/civilizations/civilization.effect';
+import { NuvuEffects } from './redux/nuvu/nuvu.effect';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
@@ -18,7 +19,7 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([CivilizationEffects])
+    EffectsModule.forRoot([NuvuEffects])
   ],
   providers: [
     { provide: 'API_URL', useValue: environment.api },

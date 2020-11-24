@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { State } from '../../../../redux'
 import { Observable } from 'rxjs';
-import { resquestData, resquestDataUpdate } from 'src/app/redux/civilizations/civilization.action';
-import { CivilizationModel } from 'src/app/core/models/civilizations.model';
+import { resquestData, resquestDataUpdate } from 'src/app/redux/nuvu/nuvu.action';
+import { ProfileModel } from 'src/app/core/models/nuvu.model';
 
 @Component({
   selector: 'app-profile',
@@ -12,25 +11,27 @@ import { CivilizationModel } from 'src/app/core/models/civilizations.model';
 })
 export class ProfileComponent implements OnInit {
 
-  civilizations$: Observable<CivilizationModel>;
-  seletedcivilizations: CivilizationModel[]
-  indice: any
+  profile$: Observable<ProfileModel>;
+  // seletedcivilizations: CivilizationModel[]
+  // indice: any
 
   constructor(
     private store: Store<any>
   ) {
     this.store.dispatch(resquestData());
-    this.civilizations$ = this.store.select((data) => data.civilizations.civilizations );
+    this.profile$ = this.store.select((data) => {
+      return data.profile.profile 
+    });
   }
 
   ngOnInit(): void {
   }
 
-  open(product) {
-    this.seletedcivilizations = [product]
-    this.indice = product.id % 2
-    console.log("Indice...", this.indice)
-    this.store.dispatch(resquestDataUpdate({ payload: Object.assign({}, product, {selected: true})  }));
-  }
+  // open(product) {
+  //   this.seletedcivilizations = [product]
+  //   this.indice = product.id % 2
+  //   console.log("Indice...", this.indice)
+  //   this.store.dispatch(resquestDataUpdate({ payload: Object.assign({}, product, {selected: true})  }));
+  // }
 
 }
